@@ -104,4 +104,14 @@ public class ClientDTO implements Serializable {
 		return Objects.equals(id, other.id);
 	}
 
+	public static Client toClient(ClientDTO dto) {
+		Client client = new Client();
+		client.setName(dto.getName());
+		client.setCpf(dto.getCpf());
+		client.setIncome(dto.getIncome());
+		client.setBirthDate(dto.getBirthDate());
+		client.setChildren(dto.getChildren());
+		return client;
+	}
+
 }
